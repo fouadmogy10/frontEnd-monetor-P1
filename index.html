@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Interactive card details form</title>
+  </head>
+<body class="container">
+  <div class="row vh-100 d-flex align-items-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg text-light border-0 rounded-5 img-card mx-auto card-p">
+        <img src="images/bg-card-front.png" class="card-img" alt="Card-front">
+        <div class="card-img-overlay pb-4">
+          <div class="h-100 d-flex flex-column justify-content-between m-2">
+            <img src="images/card-logo.svg" class="img-icon-card" alt="Card-logo">
+            <h5 id="cardHolder" class="card-title card-number mt-auto mb-4">0000 0000 0000 0000</h5>
+            <div class="d-flex justify-content-between">
+              <p id="cardName" class="card-text mb-0 text-uppercase">Jane Appleseed</p>
+              <p class="card-text mb-0"><span id="mes">00</span>/<span id="anio">00</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card shadow-lg text-light border-0 rounded-5 img-card ms-auto card-h mt-4">
+        <img src="images/bg-card-back.png" class="card-img" alt="Card-back">
+        <div class="card-img-overlay h-100 d-flex flex-column justify-content-center">
+          <h5 id="Cardcvc" class="card-title text-end card-cvc me-4 mb-0">000</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-8 mx-auto" id="column">
+          <form id="formulario" class="needs-validation" action="index.html">
+            <div class="mb-4">
+              <label for="chName">Cardholder Name</label>
+              <input id="chName" type="text" class="form-control" maxlength="30" placeholder="e.g. Jane Appleseed">
+              <div class="invalid-feedback">
+                Can't be blank
+              </div>
+            </div>
+            <idv>
+              <label for="cNumber">Card Number</label>
+              <input id="cNumber" type="text" maxlength="16" class="form-control" required="" placeholder="e.g. 1234 5678 9123 0000">
+              <div class="invalid-feedback">
+                Wrong format, numbers only
+              </div>
+            </idv>
+            <div class="mt-4 d-flex justify-content-between">
+              <div class="me-4">
+                <label for="MM">Exp. Date (MM/YY)</label>
+                <div class="input-group mb-3">
+                  <input id="MM" type="text" maxlength="2" class="form-control rounded-2 me-2" placeholder="MM">
+                  <input id="YY" type="text" maxlength="2" class="form-control rounded-2 ms-2" placeholder="YY">
+                  <div class="invalid-feedback">
+                    Can't be blank
+                  </div>
+                </div>
+              </div>
+              <div class="form-w">
+                <label for="CVC">CVC</label>
+                <input id="CVC" type="text" maxlength="3" class="form-control" placeholder="e.g. 123">
+                <div class="invalid-feedback">
+                  Can't be blank
+                </div>
+              </div>
+            </div>
+            <input type="button" id="btnConfirm" class="btn btn-color container-fluid mt-3" value="Confirm">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Bautista Carlos José Luis</a>.
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+</html>

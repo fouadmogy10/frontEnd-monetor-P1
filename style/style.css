@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+.container {
+    background-image: url('../images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.img-card {
+    width: 350px;
+}
+
+.img-icon-card {
+    width: 70px;
+}
+
+.card-title,
+.card-text,
+.form-control,
+label,
+h1,
+.btn {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.card-number {
+    letter-spacing: 4px;
+}
+
+.card-cvc {
+    font-size: small;
+}
+
+.card-text {
+    font-size: small;
+    font-weight: 400;
+}
+
+.form-control::placeholder {
+    font-weight: 500;
+    color: hsl(270, 3%, 87%);
+}
+
+.p-succes{
+    font-weight: 500;
+    color: hsl(0, 0%, 57%);
+}
+
+label {
+    font-size: small;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: hsl(278, 68%, 11%);
+}
+
+.form-w {
+    width: 180%;
+}
+
+.btn-color {
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(270, 3%, 87%);
+    border: none;
+    height: 50px;
+}
+
+.btn-color:focus{
+    background-color: hsl(278, 72%, 19%);
+    color: hsl(270, 3%, 87%);
+    border: none;
+    height: 50px;
+}
+
+.btn-color:hover {
+    background-color: hsl(276, 71%, 5%);
+    color: hsl(270, 3%, 87%);
+    border: none;
+    transition: background-color 0.9s;
+}
+
+.card-h{
+    z-index: 1;
+}
+
+.card-p{
+    z-index: 1;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .container {
+        background-image: url(../images/bg-main-mobile.png);
+        display: block;
+        background-size: contain;
+    }
+    .img-card {
+        width: 300px;
+    }
+    .card-h{
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 15%;
+    }
+    .card-p{
+        top: 80px;
+        right: 5%;
+    }
+}
